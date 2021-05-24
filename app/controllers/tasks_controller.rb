@@ -16,10 +16,10 @@ class TasksController < ApplicationController
       @task = Task.new(task_params)
       
       if @task.save
-        flash[:success] = 'タスクが 投稿されました'
+        flash[:success] = 'タスクが投稿されました'
         redirect_to @task
       else
-        flash.now[:danger] = 'タスク が投稿されませんでした'
+        flash.now[:danger] = 'タスク投稿がされませんでした'
         render :new
         
       end
@@ -33,10 +33,10 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
       
       if @task.update(task_params)
-        flash[:success] = 'タスクが正常に更新されました'
+        flash[:success] = 'タスクが編集されました'
         redirect_to @task
       else
-        flash.now[:danger] = 'タスクが更新されませんでした'
+        flash.now[:danger] = 'タスクが編集されませんでした'
         render :edit
       end
     end

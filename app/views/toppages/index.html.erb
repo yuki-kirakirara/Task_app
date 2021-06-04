@@ -1,5 +1,0 @@
-<%=if logged_in? %>
-<p>ログイン完了ユーザー: <%= current_user.name %></p>
-<% else %>
-  <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-<% end %>
